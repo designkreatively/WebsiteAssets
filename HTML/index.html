@@ -1,1 +1,330 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Design Kreatively — Mattia | Graphic Designer, Brussels</title> <meta name="description" content="Mattia — freelance graphic designer based in Brussels. Editorial design, posters, and visual identity for institutions, NGOs, and cultural organisations."> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> <style> :root, [data-theme="dark"] { --color-bg: #222222; --color-surface: #2a2a2a; --color-surface-2: #333333; --color-border: #3d3d3d; --color-text: #f5f5f0; --color-text-muted: #a8a8a8; --color-text-faint: #7d7d7d; --color-text-inverse: #1a1a1a; --color-accent: #a9bccf; --color-accent-strong: #c3d1de; --font-display: 'Montserrat', 'Helvetica Neue', sans-serif; --font-body: 'Montserrat', 'Helvetica Neue', sans-serif; --space-2: 0.5rem; --space-4: 1rem; --space-6: 1.5rem; --space-8: 2rem; --space-12: 3rem; --space-16: 4rem; --space-24: 6rem; --max-width: 1120px; } [data-theme="light"] { --color-bg: #f5f5f0; --color-surface: #ffffff; --color-surface-2: #ececE6; --color-border: #dcdcd5; --color-text: #1a1a1a; --color-text-muted: #5c5c58; --color-text-faint: #7d7d7d; --color-text-inverse: #f5f5f0; --color-accent: #4d6b85; --color-accent-strong: #35495e; } * { box-sizing: border-box; margin: 0; padding: 0; } html { scroll-behavior: smooth; } body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-text); line-height: 1.65; font-size: 16px; transition: background 0.3s ease, color 0.3s ease; } img { max-width: 100%; display: block; } a { color: inherit; text-decoration: none; } ul { list-style: none; } .container { max-width: var(--max-width); margin-inline: auto; padding-inline: var(--space-6); } section { padding-block: var(--space-24); } header { position: sticky; top: 0; background: color-mix(in oklab, var(--color-bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--color-border); z-index: 100; transition: background 0.3s ease, border-color 0.3s ease; } .nav { display: flex; align-items: center; justify-content: space-between; padding-block: var(--space-4); } .logo { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; letter-spacing: 0.01em; text-transform: lowercase; } .nav-right { display: flex; align-items: center; gap: var(--space-8); } .nav-links { display: flex; gap: var(--space-8); font-size: 0.85rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; } .nav-links a { color: var(--color-text-muted); transition: color 0.2s ease; } .nav-links a:hover { color: var(--color-accent); } .theme-toggle { position: relative; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); cursor: pointer; transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease; } .theme-toggle:hover { transform: translateY(-2px); border-color: var(--color-accent); } .theme-toggle svg { width: 18px; height: 18px; } .theme-toggle .tooltip { position: absolute; top: 120%; right: 0; white-space: nowrap; font-size: 0.72rem; font-weight: 500; padding: var(--space-2) var(--space-4); background: var(--color-text); color: var(--color-bg); border-radius: 4px; opacity: 0; pointer-events: none; transform: translateY(-4px); transition: opacity 0.2s ease, transform 0.2s ease; } .theme-toggle:hover .tooltip { opacity: 1; transform: translateY(0); } .hero { padding-top: var(--space-24); padding-bottom: var(--space-16); } .hero-eyebrow { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-accent); margin-bottom: var(--space-6); } .hero h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.2rem, 5.5vw, 4rem); line-height: 1.1; max-width: 16ch; margin-bottom: var(--space-6); letter-spacing: -0.01em; } .hero p { max-width: 60ch; font-size: 1.1rem; font-weight: 400; color: var(--color-text-muted); margin-bottom: var(--space-4); } .hero .mission { max-width: 60ch; font-size: 1rem; color: var(--color-text-muted); margin-bottom: var(--space-8); } .btn { display: inline-block; padding: var(--space-4) var(--space-8); background: var(--color-text); color: var(--color-bg); border-radius: 4px; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; transition: background 0.2s ease, transform 0.2s ease; } .btn:hover { background: var(--color-accent); color: var(--color-text-inverse); transform: translateY(-2px); } .section-eyebrow { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-accent); margin-bottom: var(--space-4); } .section-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: var(--space-12); letter-spacing: -0.01em; } .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } .service-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 8px; padding: var(--space-8); transition: box-shadow 0.2s ease, transform 0.2s ease, background 0.3s ease, border-color 0.3s ease; } .service-card:hover { box-shadow: 0 12px 32px rgba(0,0,0,0.24); transform: translateY(-4px); } .service-number { font-family: var(--font-display); font-weight: 800; font-size: 1.8rem; color: var(--color-accent); margin-bottom: var(--space-4); } .service-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: var(--space-2); } .service-card p { color: var(--color-text-muted); font-size: 0.95rem; } .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-8); } .work-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden; transition: background 0.3s ease, border-color 0.3s ease; } .work-card-images { display: grid; grid-template-columns: 2fr 1fr; gap: 2px; background: var(--color-border); } .work-card-images img { aspect-ratio: 4/3; object-fit: cover; width: 100%; height: 100%; } .work-card-images .stack { display: grid; grid-template-rows: 1fr 1fr; gap: 2px; } .work-card-body { padding: var(--space-6); } .work-tag { display: inline-block; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-accent); margin-bottom: var(--space-2); } .work-card h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: var(--space-2); } .work-card p { font-size: 0.92rem; color: var(--color-text-muted); } .about { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center; } .about-text p { margin-bottom: var(--space-4); color: var(--color-text-muted); } .tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-6); } .tag { font-size: 0.78rem; font-weight: 500; padding: var(--space-2) var(--space-4); background: var(--color-surface-2); border-radius: 100px; color: var(--color-text-muted); transition: background 0.3s ease; } .about-visual { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); } .about-visual img { border-radius: 8px; aspect-ratio: 1/1; object-fit: cover; } .about-visual img:nth-child(2) { margin-top: var(--space-8); } .contact { background: var(--color-surface-2); text-align: center; transition: background 0.3s ease; } .contact h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 4.5vw, 3rem); margin-bottom: var(--space-6); letter-spacing: -0.01em; } .contact .btn { background: var(--color-accent); color: var(--color-text-inverse); } footer { padding-block: var(--space-8); text-align: center; font-size: 0.85rem; color: var(--color-text-faint); } @media (max-width: 768px) { .nav-links { display: none; } .services-grid, .work-grid, .about, .about-visual { grid-template-columns: 1fr; } .work-card-images { grid-template-columns: 1fr; } .work-card-images .stack { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; } section { padding-block: var(--space-16); } } </style> </head> <body> <header> <div class="container nav"> <div class="logo">design.kreatively</div> <div class="nav-right"> <nav class="nav-links"> <a href="#services">Services</a> <a href="#work">Work</a> <a href="#about">About</a> <a href="#contact">Contact</a> </nav> <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme"> <span class="tooltip" id="themeTooltip">Light theme</span> <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M9 18h6"></path> <path d="M10 22h4"></path> <path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2z"></path> </svg> </button> </div> </div> </header> <section class="hero"> <div class="container"> <div class="hero-eyebrow">Graphic Designer — Brussels</div> <h1>I turn complex ideas into visually compelling narratives.</h1> <p>Hi there! My name is Mattia and I'm a seasoned graphic designer based in Brussels. I specialise in creating impactful illustrations and knowledge-sharing materials that engage audiences.</p> <p class="mission">My mission is to blend creativity with a strategic understanding of client needs, ensuring each design is both effective and adaptable.</p> <a href="#work" class="btn">View my work</a> </div> </section> <section id="services"> <div class="container"> <div class="section-eyebrow">What I do</div> <h2 class="section-title">Services</h2> <div class="services-grid"> <div class="service-card"><div class="service-number">01</div><h3>Editorial &amp; Publications</h3><p>Annual reports, brochures, layout systems.</p></div> <div class="service-card"><div class="service-number">02</div><h3>Posters &amp; Large-Format</h3><p>Campaigns, exhibitions, print-ready artwork.</p></div> <div class="service-card"><div class="service-number">03</div><h3>Visual Identity &amp; Campaigns</h3><p>Brand systems, multi-channel campaign visuals.</p></div> </div> </div> </section> <section id="work"> <div class="container"> <div class="section-eyebrow">Selected Projects</div> <h2 class="section-title">Work</h2> <div class="work-grid"> <div class="work-card"> <div class="work-card-images"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/SRSP/Mockup-Cover%20publi.jpg" alt="SRSP Flanders visual identity, publication cover mockup" width="600" height="450" loading="lazy"> <div class="stack"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/SRSP/Mockup-page2.jpg" alt="SRSP Flanders publication interior page 2" width="300" height="220" loading="lazy"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/SRSP/Mockup-page14.jpg" alt="SRSP Flanders publication interior page 14" width="300" height="220" loading="lazy"> </div> </div> <div class="work-card-body"><div class="work-tag">Visual Identity &amp; Editorial</div><h3>SRSP Flanders</h3><p>Visual identity system and publication design for SRSP Flanders, including cover design and interior layout mockups.</p></div> </div> <div class="work-card"> <div class="work-card-images"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ATMooc/AT%20SuperMOOC-identity_IG0.jpg" alt="AT SuperMOOC identity design" width="600" height="450" loading="lazy"> <div class="stack"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ATMooc/AT%20SuperMOOC-identity_IG1.jpg" alt="AT SuperMOOC identity variation" width="300" height="220" loading="lazy"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ATMooc/AT%20SuperMOOC-identity_IG2.jpg" alt="AT SuperMOOC identity variation" width="300" height="220" loading="lazy"> </div> </div> <div class="work-card-body"><div class="work-tag">Visual Identity</div><h3>AT SuperMOOC</h3><p>Visual identity design for the AT SuperMOOC programme, developed across multiple applications and formats.</p></div> </div> <div class="work-card"> <div class="work-card-images"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ICGW24/ICWG-Idea%203-11.jpg" alt="ICWG 2024 guidelines concept sketch" width="600" height="450" loading="lazy"> <div class="stack"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ICGW24/Isometric%20grid.jpg" alt="ICWG 2024 isometric grid diagram" width="300" height="220" loading="lazy"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ICGW24/Outline%20View.jpg" alt="ICWG 2024 outline view diagram" width="300" height="220" loading="lazy"> </div> </div> <div class="work-card-body"><div class="work-tag">Editorial &amp; Guidelines</div><h3>ICWG Guidelines 2024</h3><p>Interactive Classroom Working Group guidelines, including isometric diagrams and structural outline visuals.</p></div> </div> <div class="work-card"> <div class="work-card-images"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/SRSP/Mockup-page26.jpg" alt="SRSP Flanders publication page 26" width="600" height="450" loading="lazy"> <div class="stack"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ATMooc/AT%20SuperMOOC-identity_IG0.jpg" alt="AT SuperMOOC identity detail" width="300" height="220" loading="lazy"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ICGW24/ICWG-Idea%203-11.jpg" alt="ICWG guidelines detail" width="300" height="220" loading="lazy"> </div> </div> <div class="work-card-body"><div class="work-tag">More Work</div><h3>More projects coming soon</h3><p>This portfolio is actively growing — more editorial, poster and identity projects will be added shortly.</p></div> </div> </div> </div> </section> <section id="about"> <div class="container about"> <div class="about-visual"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/SRSP/Mockup-Cover%20publi.jpg" alt="SRSP Flanders design work" width="300" height="300" loading="lazy"> <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ATMooc/AT%20SuperMOOC-identity_IG0.jpg" alt="AT SuperMOOC design work" width="300" height="300" loading="lazy"> </div> <div class="about-text"> <div class="section-eyebrow">About</div> <h2 class="section-title">Mattia</h2> <p>I'm a freelance graphic designer with over seven years of experience designing and adapting creative assets for print and digital media. Currently Visual Media Editor at European Schoolnet, alongside running my independent practice, Design.Kreatively, since 2018.</p> <p>I hold a degree in Graphic Design from LUCA School of Arts, Brussels, and work across editorial layout, posters, and visual identity for education, culture, technology and rights-related sectors.</p> <div class="tags"> <span class="tag">Adobe Photoshop</span> <span class="tag">Adobe Illustrator</span> <span class="tag">Adobe InDesign</span> <span class="tag">Brand Identity</span> <span class="tag">Print Production</span> </div> </div> </div> </section> <section class="contact" id="contact"> <div class="container"> <h2>Let's work together.</h2> <a href="mailto:hello@designkreatively.eu" class="btn">Get in touch</a> </div> </section> <footer> <div class="container">&copy; 2026 Design Kreatively — Mattia. Brussels, Belgium.</div> </footer> <script> (function(){ var root = document.documentElement; var toggle = document.getElementById('themeToggle'); var icon = document.getElementById('themeIcon'); var tooltip = document.getElementById('themeTooltip'); var sunIcon = '<path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path><circle cx="12" cy="12" r="5"></circle>'; var bulbIcon = '<path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2z"></path>'; var current = 'dark'; root.setAttribute('data-theme', current); toggle.addEventListener('click', function(){ current = current === 'dark' ? 'light' : 'dark'; root.setAttribute('data-theme', current); if (current === 'dark') { icon.innerHTML = bulbIcon; tooltip.textContent = 'Light theme'; toggle.setAttribute('aria-label', 'Switch to light theme'); } else { icon.innerHTML = sunIcon; tooltip.textContent = 'Dark theme'; toggle.setAttribute('aria-label', 'Switch to dark theme'); } }); })(); </script> </body> </html> 
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Design Kreatively — Mattia | Graphic Designer, Brussels&lt;/title&gt;
+&lt;meta name="description" content="Mattia — freelance graphic designer based in Brussels. Editorial design, posters, and visual identity for institutions, NGOs, and cultural organisations."&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"&gt;
+&lt;style&gt;
+
+:root, [data-theme="dark"] {
+  --color-bg: #222222;
+  --color-surface: #2a2a2a;
+  --color-surface-2: #333333;
+  --color-border: #3d3d3d;
+  --color-text: #f5f5f0;
+  --color-text-muted: #a8a8a8;
+  --color-text-faint: #7d7d7d;
+  --color-text-inverse: #1a1a1a;
+  --color-accent: #a9bccf;
+  --color-accent-strong: #c3d1de;
+
+  --font-display: 'Montserrat', 'Helvetica Neue', sans-serif;
+  --font-body: 'Montserrat', 'Helvetica Neue', sans-serif;
+
+  --space-2: 0.5rem; --space-4: 1rem; --space-6: 1.5rem; --space-8: 2rem;
+  --space-12: 3rem; --space-16: 4rem; --space-24: 6rem;
+  --max-width: 1120px;
+}
+
+[data-theme="light"] {
+  --color-bg: #f5f5f0;
+  --color-surface: #ffffff;
+  --color-surface-2: #ececE6;
+  --color-border: #dcdcd5;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5c5c58;
+  --color-text-faint: #7d7d7d;
+  --color-text-inverse: #f5f5f0;
+  --color-accent: #4d6b85;
+  --color-accent-strong: #35495e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.65;
+  font-size: 16px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+.container { max-width: var(--max-width); margin-inline: auto; padding-inline: var(--space-6); }
+section { padding-block: var(--space-24); }
+
+header {
+  position: sticky; top: 0;
+  background: color-mix(in oklab, var(--color-bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 100;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.nav { display: flex; align-items: center; justify-content: space-between; padding-block: var(--space-4); }
+.logo { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; letter-spacing: 0.01em; text-transform: lowercase; }
+.nav-right { display: flex; align-items: center; gap: var(--space-8); }
+.nav-links { display: flex; gap: var(--space-8); font-size: 0.85rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
+.nav-links a { color: var(--color-text-muted); transition: color 0.2s ease; }
+.nav-links a:hover { color: var(--color-accent); }
+
+.theme-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.theme-toggle:hover { transform: translateY(-2px); border-color: var(--color-accent); }
+.theme-toggle svg { width: 18px; height: 18px; }
+.theme-toggle .tooltip {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  white-space: nowrap;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-text);
+  color: var(--color-bg);
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.theme-toggle:hover .tooltip { opacity: 1; transform: translateY(0); }
+
+.hero { padding-top: var(--space-24); padding-bottom: var(--space-16); }
+.hero-eyebrow { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-accent); margin-bottom: var(--space-6); }
+.hero h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.2rem, 5.5vw, 4rem); line-height: 1.1; max-width: 16ch; margin-bottom: var(--space-6); letter-spacing: -0.01em; }
+.hero p { max-width: 60ch; font-size: 1.1rem; font-weight: 400; color: var(--color-text-muted); margin-bottom: var(--space-4); }
+.hero .mission { max-width: 60ch; font-size: 1rem; color: var(--color-text-muted); margin-bottom: var(--space-8); }
+.btn {
+  display: inline-block; padding: var(--space-4) var(--space-8);
+  background: var(--color-text); color: var(--color-bg);
+  border-radius: 4px; font-size: 0.9rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.btn:hover { background: var(--color-accent); color: var(--color-text-inverse); transform: translateY(-2px); }
+
+.section-eyebrow { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-accent); margin-bottom: var(--space-4); }
+.section-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: var(--space-12); letter-spacing: -0.01em; }
+
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.service-card {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: 8px; padding: var(--space-8);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, background 0.3s ease, border-color 0.3s ease;
+}
+.service-card:hover { box-shadow: 0 12px 32px rgba(0,0,0,0.24); transform: translateY(-4px); }
+.service-number { font-family: var(--font-display); font-weight: 800; font-size: 1.8rem; color: var(--color-accent); margin-bottom: var(--space-4); }
+.service-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: var(--space-2); }
+.service-card p { color: var(--color-text-muted); font-size: 0.95rem; }
+
+.work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-8); }
+.work-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden; transition: background 0.3s ease, border-color 0.3s ease; }
+.work-card-images { display: grid; grid-template-columns: 2fr 1fr; gap: 2px; background: var(--color-border); }
+.work-card-images img { aspect-ratio: 4/3; object-fit: cover; width: 100%; height: 100%; }
+.work-card-images .stack { display: grid; grid-template-rows: 1fr 1fr; gap: 2px; }
+.work-card-body { padding: var(--space-6); }
+.work-tag { display: inline-block; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-accent); margin-bottom: var(--space-2); }
+.work-card h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: var(--space-2); }
+.work-card p { font-size: 0.92rem; color: var(--color-text-muted); }
+
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center; }
+.about-text p { margin-bottom: var(--space-4); color: var(--color-text-muted); }
+.tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-6); }
+.tag { font-size: 0.78rem; font-weight: 500; padding: var(--space-2) var(--space-4); background: var(--color-surface-2); border-radius: 100px; color: var(--color-text-muted); transition: background 0.3s ease; }
+.about-visual { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.about-visual img { border-radius: 8px; aspect-ratio: 1/1; object-fit: cover; }
+.about-visual img:nth-child(2) { margin-top: var(--space-8); }
+
+.contact { background: var(--color-surface-2); text-align: center; transition: background 0.3s ease; }
+.contact h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 4.5vw, 3rem); margin-bottom: var(--space-6); letter-spacing: -0.01em; }
+.contact .btn { background: var(--color-accent); color: var(--color-text-inverse); }
+footer { padding-block: var(--space-8); text-align: center; font-size: 0.85rem; color: var(--color-text-faint); }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .services-grid, .work-grid, .about, .about-visual { grid-template-columns: 1fr; }
+  .work-card-images { grid-template-columns: 1fr; }
+  .work-card-images .stack { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; }
+  section { padding-block: var(--space-16); }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;
+  &lt;div class="container nav"&gt;
+    &lt;div class="logo"&gt;design.kreatively&lt;/div&gt;
+    &lt;div class="nav-right"&gt;
+      &lt;nav class="nav-links"&gt;
+        &lt;a href="#services"&gt;Services&lt;/a&gt;
+        &lt;a href="#work"&gt;Work&lt;/a&gt;
+        &lt;a href="#about"&gt;About&lt;/a&gt;
+        &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+      &lt;/nav&gt;
+      &lt;button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme"&gt;
+        &lt;span class="tooltip" id="themeTooltip"&gt;Light theme&lt;/span&gt;
+        &lt;svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+          &lt;path d="M9 18h6"&gt;&lt;/path&gt;
+          &lt;path d="M10 22h4"&gt;&lt;/path&gt;
+          &lt;path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2z"&gt;&lt;/path&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;section class="hero"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="hero-eyebrow"&gt;Graphic Designer — Brussels&lt;/div&gt;
+    &lt;h1&gt;I turn complex ideas into visually compelling narratives.&lt;/h1&gt;
+    &lt;p&gt;Hi there! My name is Mattia and I'm a seasoned graphic designer based in Brussels. I specialise in creating impactful illustrations and knowledge-sharing materials that engage audiences.&lt;/p&gt;
+    &lt;p class="mission"&gt;My mission is to blend creativity with a strategic understanding of client needs, ensuring each design is both effective and adaptable.&lt;/p&gt;
+    &lt;a href="#work" class="btn"&gt;View my work&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id="services"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="section-eyebrow"&gt;What I do&lt;/div&gt;
+    &lt;h2 class="section-title"&gt;Services&lt;/h2&gt;
+    &lt;div class="services-grid"&gt;
+      &lt;div class="service-card"&gt;&lt;div class="service-number"&gt;01&lt;/div&gt;&lt;h3&gt;Editorial &amp;amp; Publications&lt;/h3&gt;&lt;p&gt;Annual reports, brochures, layout systems.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class="service-card"&gt;&lt;div class="service-number"&gt;02&lt;/div&gt;&lt;h3&gt;Posters &amp;amp; Large-Format&lt;/h3&gt;&lt;p&gt;Campaigns, exhibitions, print-ready artwork.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class="service-card"&gt;&lt;div class="service-number"&gt;03&lt;/div&gt;&lt;h3&gt;Visual Identity &amp;amp; Campaigns&lt;/h3&gt;&lt;p&gt;Brand systems, multi-channel campaign visuals.&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id="work"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="section-eyebrow"&gt;Selected Projects&lt;/div&gt;
+    &lt;h2 class="section-title"&gt;Work&lt;/h2&gt;
+    &lt;div class="work-grid"&gt;
+      &lt;div class="work-card"&gt;
+        &lt;div class="work-card-images"&gt;
+          &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/SRSP/Mockup-Cover%20publi.jpg" alt="SRSP Flanders visual identity, publication cover mockup" width="600" height="450" loading="lazy"&gt;
+          &lt;div class="stack"&gt;
+            &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/SRSP/Mockup-page2.jpg" alt="SRSP Flanders publication interior page 2" width="300" height="220" loading="lazy"&gt;
+            &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/SRSP/Mockup-page14.jpg" alt="SRSP Flanders publication interior page 14" width="300" height="220" loading="lazy"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="work-card-body"&gt;&lt;div class="work-tag"&gt;Visual Identity &amp;amp; Editorial&lt;/div&gt;&lt;h3&gt;SRSP Flanders&lt;/h3&gt;&lt;p&gt;Visual identity system and publication design for SRSP Flanders, including cover design and interior layout mockups.&lt;/p&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="work-card"&gt;
+        &lt;div class="work-card-images"&gt;
+          &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ATMooc/AT%20SuperMOOC-identity_IG0.jpg" alt="AT SuperMOOC identity design" width="600" height="450" loading="lazy"&gt;
+          &lt;div class="stack"&gt;
+            &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ATMooc/AT%20SuperMOOC-identity_IG1.jpg" alt="AT SuperMOOC identity variation" width="300" height="220" loading="lazy"&gt;
+            &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ATMooc/AT%20SuperMOOC-identity_IG2.jpg" alt="AT SuperMOOC identity variation" width="300" height="220" loading="lazy"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="work-card-body"&gt;&lt;div class="work-tag"&gt;Visual Identity&lt;/div&gt;&lt;h3&gt;AT SuperMOOC&lt;/h3&gt;&lt;p&gt;Visual identity design for the AT SuperMOOC programme, developed across multiple applications and formats.&lt;/p&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="work-card"&gt;
+        &lt;div class="work-card-images"&gt;
+          &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ICGW24/ICWG-Idea%203-11.jpg" alt="ICWG 2024 guidelines concept sketch" width="600" height="450" loading="lazy"&gt;
+          &lt;div class="stack"&gt;
+            &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ICGW24/Isometric%20grid.jpg" alt="ICWG 2024 isometric grid diagram" width="300" height="220" loading="lazy"&gt;
+            &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ICGW24/Outline%20View.jpg" alt="ICWG 2024 outline view diagram" width="300" height="220" loading="lazy"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="work-card-body"&gt;&lt;div class="work-tag"&gt;Editorial &amp;amp; Guidelines&lt;/div&gt;&lt;h3&gt;ICWG Guidelines 2024&lt;/h3&gt;&lt;p&gt;Interactive Classroom Working Group guidelines, including isometric diagrams and structural outline visuals.&lt;/p&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="work-card"&gt;
+        &lt;div class="work-card-images"&gt;
+          &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/SRSP/Mockup-page26.jpg" alt="SRSP Flanders publication page 26" width="600" height="450" loading="lazy"&gt;
+          &lt;div class="stack"&gt;
+            &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ATMooc/AT%20SuperMOOC-identity_IG0.jpg" alt="AT SuperMOOC identity detail" width="300" height="220" loading="lazy"&gt;
+            &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ICGW24/ICWG-Idea%203-11.jpg" alt="ICWG guidelines detail" width="300" height="220" loading="lazy"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="work-card-body"&gt;&lt;div class="work-tag"&gt;More Work&lt;/div&gt;&lt;h3&gt;More projects coming soon&lt;/h3&gt;&lt;p&gt;This portfolio is actively growing — more editorial, poster and identity projects will be added shortly.&lt;/p&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id="about"&gt;
+  &lt;div class="container about"&gt;
+    &lt;div class="about-visual"&gt;
+      &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/SRSP/Mockup-Cover%20publi.jpg" alt="SRSP Flanders design work" width="300" height="300" loading="lazy"&gt;
+      &lt;img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/675b86be25341ac4308c9a3ae0184e1d59d6c857/ATMooc/AT%20SuperMOOC-identity_IG0.jpg" alt="AT SuperMOOC design work" width="300" height="300" loading="lazy"&gt;
+    &lt;/div&gt;
+    &lt;div class="about-text"&gt;
+      &lt;div class="section-eyebrow"&gt;About&lt;/div&gt;
+      &lt;h2 class="section-title"&gt;Mattia&lt;/h2&gt;
+      &lt;p&gt;I'm a freelance graphic designer with over seven years of experience designing and adapting creative assets for print and digital media. Currently Visual Media Editor at European Schoolnet, alongside running my independent practice, Design.Kreatively, since 2018.&lt;/p&gt;
+      &lt;p&gt;I hold a degree in Graphic Design from LUCA School of Arts, Brussels, and work across editorial layout, posters, and visual identity for education, culture, technology and rights-related sectors.&lt;/p&gt;
+      &lt;div class="tags"&gt;
+        &lt;span class="tag"&gt;Adobe Photoshop&lt;/span&gt;
+        &lt;span class="tag"&gt;Adobe Illustrator&lt;/span&gt;
+        &lt;span class="tag"&gt;Adobe InDesign&lt;/span&gt;
+        &lt;span class="tag"&gt;Brand Identity&lt;/span&gt;
+        &lt;span class="tag"&gt;Print Production&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class="contact" id="contact"&gt;
+  &lt;div class="container"&gt;
+    &lt;h2&gt;Let's work together.&lt;/h2&gt;
+    &lt;a href="mailto:hello@designkreatively.eu" class="btn"&gt;Get in touch&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;footer&gt;
+  &lt;div class="container"&gt;&amp;copy; 2026 Design Kreatively — Mattia. Brussels, Belgium.&lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;script&gt;
+(function(){
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  var icon = document.getElementById('themeIcon');
+  var tooltip = document.getElementById('themeTooltip');
+
+  var sunIcon = '&lt;path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"&gt;&lt;/path&gt;&lt;circle cx="12" cy="12" r="5"&gt;&lt;/circle&gt;';
+  var bulbIcon = '&lt;path d="M9 18h6"&gt;&lt;/path&gt;&lt;path d="M10 22h4"&gt;&lt;/path&gt;&lt;path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2z"&gt;&lt;/path&gt;';
+
+  var current = 'dark';
+  root.setAttribute('data-theme', current);
+
+  toggle.addEventListener('click', function(){
+    current = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', current);
+    if (current === 'dark') {
+      icon.innerHTML = bulbIcon;
+      tooltip.textContent = 'Light theme';
+      toggle.setAttribute('aria-label', 'Switch to light theme');
+    } else {
+      icon.innerHTML = sunIcon;
+      tooltip.textContent = 'Dark theme';
+      toggle.setAttribute('aria-label', 'Switch to dark theme');
+    }
+  });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
