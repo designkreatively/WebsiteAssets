@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EUN Work Programme 2026 — Design Kreatively</title>
+<meta name="description" content="A 3D typographic cover, minimal in structure but designed to draw the eye. Explored three-dimensional typography to balance clarity and depth. The surface patte">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo"><a href="../index.html">design.kreatively</a></div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="../index.html#services">Services</a>
+        <a href="../work.html" class="active">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme">
+        <span class="tooltip" id="themeTooltip">Light theme</span>
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="project-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="../work.html">← Back to all work</a></div>
+    <div class="work-tag">3D Typography · Report · 2026</div>
+    <h1>EUN Work Programme 2026</h1>
+  </div>
+</section>
+
+<section style="padding-top: 0;">
+  <div class="container">
+    <div class="project-gallery">
+      <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/WP26/cover.jpg" alt="EUN Work Programme 2026 cover" loading="lazy">
+      <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/WP26/page2.jpg" alt="EUN Work Programme 2026 detail" loading="lazy">
+      <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/WP26/page3.jpg" alt="EUN Work Programme 2026 detail" loading="lazy">
+    </div>
+    <div class="project-body">
+      <p>A 3D typographic cover, minimal in structure but designed to draw the eye. Explored three-dimensional typography to balance clarity and depth. The surface pattern is inspired by reaction-diffusion systems, used as a metaphor for different actors gradually connecting and forming a cohesive whole.</p>
+      <p>Started with the type in 2D, developed the pattern language, extruded the structure into 3D, adjusted depth, lighting and perspective, then refined through iteration.</p>
+      
+      <div class="work-tags" style="margin-top: var(--space-6);"><span class="pill">3D Typography</span><span class="pill">Cover Design</span><span class="pill">Conceptual Design</span><span class="pill">Generative Pattern</span><span class="pill">Creative Direction</span><span class="pill">Editorial Design</span></div>
+      <div><a class="back-link" href="../work.html">← Back to all work</a></div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">&copy; 2026 Design Kreatively — Mattia. Brussels, Belgium.</div>
+</footer>
+<script>
+(function(){
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  var icon = document.getElementById('themeIcon');
+  var tooltip = document.getElementById('themeTooltip');
+  var sunIcon = '<path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path><circle cx="12" cy="12" r="5"></circle>';
+  var bulbIcon = '<path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2z"></path>';
+  var current = 'dark';
+  root.setAttribute('data-theme', current);
+  toggle.addEventListener('click', function(){
+    current = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', current);
+    if (current === 'dark') { icon.innerHTML = bulbIcon; tooltip.textContent = 'Light theme'; toggle.setAttribute('aria-label', 'Switch to light theme'); }
+    else { icon.innerHTML = sunIcon; tooltip.textContent = 'Dark theme'; toggle.setAttribute('aria-label', 'Switch to dark theme'); }
+  });
+})();
+</script>
+</body>
+</html>
