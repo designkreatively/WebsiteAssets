@@ -4,11 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EASA Annual Report 2024 — Design Kreatively</title>
-<meta name="description" content="Modern, bold, and geometric approach, heavily influenced by Art Deco aesthetics. Combines clean lines, dynamic shapes, and vibrant color contrasts (blues, orang">
+<meta name="description" content="Modern, bold, and geometric approach, heavily influenced by Art Deco aesthetics. It combines clean lines, dynamic shapes, and vibrant color contrasts (blues, or">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
+<style>
+.project-gallery-flex { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: var(--space-8); }
+.project-gallery-flex img { height: 320px; width: auto; flex: 1 1 auto; object-fit: cover; min-width: 0; border-radius: 6px; }
+.project-cover-full { width: 100%; border-radius: 8px; margin-bottom: var(--space-8); display: block; }
+.project-text-block { max-width: 68ch; margin-bottom: var(--space-8); }
+.project-text-block p { color: var(--color-text-muted); margin-bottom: var(--space-4); font-size: 1.05rem; }
+@media (max-width: 768px) {
+  .project-gallery-flex img { height: 200px; }
+}
+</style>
 </head>
 <body>
 <header>
@@ -41,19 +51,16 @@
 
 <section style="padding-top: 0;">
   <div class="container">
-    <div class="project-gallery">
-      <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/EASA%2024/Mockup%201.jpg" alt="EASA Annual Report 2024 cover" loading="lazy">
-      <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/EASA%2024/Mockup%202.jpg" alt="EASA Annual Report 2024 detail" loading="lazy">
-      <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/EASA%2024/Mockup%203.jpg" alt="EASA Annual Report 2024 detail" loading="lazy">
-      <img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/EASA%2024/Mockup%204.jpg" alt="EASA Annual Report 2024 detail" loading="lazy">
-    </div>
-    <div class="project-body">
-      <p>Modern, bold, and geometric approach, heavily influenced by Art Deco aesthetics. Combines clean lines, dynamic shapes, and vibrant color contrasts (blues, oranges, and golds), evoking a sense of luxury and contemporary energy.</p>
+    <img class="project-cover-full" src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/EASA%2024/Mockup%201.jpg" alt="EASA Annual Report 2024 cover" loading="lazy">
+    <div class="project-text-block">
+      <p>Modern, bold, and geometric approach, heavily influenced by Art Deco aesthetics. It combines clean lines, dynamic shapes, and vibrant color contrasts (blues, oranges, and golds), evoking both a sense of luxury and contemporary energy.</p>
       
       <a class="project-link" href="https://www.easa-alliance.org/publications/" target="_blank" rel="noopener">View full project →</a>
-      <div class="work-tags" style="margin-top: var(--space-6);"><span class="pill">Report Design</span><span class="pill">Art Deco</span><span class="pill">Geometric Design</span><span class="pill">Color Theory</span><span class="pill">Creative Direction</span><span class="pill">Publication Design</span></div>
-      <div><a class="back-link" href="../work.html">← Back to all work</a></div>
     </div>
+    <div class="project-gallery-flex"><img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/EASA%2024/Mockup%202.jpg" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/EASA%2024/Mockup%203.jpg" alt="" loading="lazy"></div>
+    <div class="project-gallery-flex"><img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/EASA%2024/Mockup%204.jpg" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/EASA%2024/Mockup%205.jpg" alt="" loading="lazy"></div>
+    <div class="work-tags" style="margin-top: var(--space-6);"><span class="pill">Report Design</span><span class="pill">Art Deco</span><span class="pill">Geometric Design</span><span class="pill">Color Theory</span><span class="pill">Creative Direction</span><span class="pill">Publication Design</span></div>
+    <div><a class="back-link" href="../work.html">← Back to all work</a></div>
   </div>
 </section>
 <footer>
