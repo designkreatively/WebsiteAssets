@@ -88,8 +88,8 @@ footer { padding-block: var(--space-8); text-align: center; font-size: 0.85rem; 
 .project-link { display: inline-block; margin-bottom: var(--space-8); font-weight: 600; color: var(--color-accent); }
 .back-link { display: inline-block; margin-top: var(--space-8); font-size: 0.9rem; color: var(--color-accent); font-weight: 600; }
 
-.project-gallery-flex { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: var(--space-8); }
-.project-gallery-flex img { height: 320px; width: auto; flex: 1 1 auto; object-fit: cover; min-width: 0; border-radius: 6px; }
+.project-gallery-flex { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: var(--space-8); align-items: flex-start; justify-content: center; }
+.project-gallery-flex img { height: 320px; width: auto; max-width: 100%; flex: 0 1 auto; object-fit: contain; min-width: 0; border-radius: 6px; background: var(--color-surface-2); }
 .project-cover-full { width: 100%; border-radius: 8px; margin-bottom: var(--space-8); display: block; }
 .project-text-block { max-width: 68ch; margin-bottom: var(--space-8); }
 .project-text-block p { color: var(--color-text-muted); margin-bottom: var(--space-4); font-size: 1.05rem; }
