@@ -104,3 +104,5 @@ footer { padding-block: var(--space-8); text-align: center; font-size: 0.85rem; 
   section { padding-block: var(--space-16); }
   .project-gallery-flex img { height: 200px; }
 }
+.logo a { display: inline-flex; align-items: center; gap: 0.6rem; }
+.logo-mark { height: 1.8rem; width: auto; display: block; }
