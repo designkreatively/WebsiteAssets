@@ -106,3 +106,10 @@ footer { padding-block: var(--space-8); text-align: center; font-size: 0.85rem; 
 }
 .logo a { display: inline-flex; align-items: center; gap: 0.6rem; }
 .logo-mark { height: 1.8rem; width: auto; display: block; }
+.about-logo {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
