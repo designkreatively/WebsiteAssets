@@ -64,12 +64,22 @@ header { position: sticky; top: 0; background: color-mix(in oklab, var(--color-b
 .work-card p { font-size: 0.92rem; color: var(--color-text-muted); margin-bottom: var(--space-4); }
 .work-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
 .pill { font-size: 0.7rem; font-weight: 500; padding: 0.3rem 0.7rem; background: var(--color-surface-2); border-radius: 100px; color: var(--color-text-muted); }
-.about { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center; }
-.about-text p { margin-bottom: var(--space-4); color: var(--color-text-muted); }
+.about {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: var(--space-12, var(--space-16));
+  align-items: center; 
+}
+.about-text { max-width: 70ch; }
+.about-text p {
+  margin-bottom: var(--space-4);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
 .tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-6); }
 .tag { font-size: 0.78rem; font-weight: 500; padding: var(--space-2) var(--space-4); background: var(--color-surface-2); border-radius: 100px; color: var(--color-text-muted); transition: background 0.3s ease; }
 .about-visual { display: flex; align-items: center; justify-content: center; }
-.about-visual img { width: 100%; max-width: 300px; height: auto; object-fit: contain; }
+.about-visual img { width: 100%; max-width: 220px; height: auto; object-fit: contain; }
 .contact { background: var(--color-surface-2); text-align: center; transition: background 0.3s ease; }
 .contact h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 4.5vw, 3rem); margin-bottom: var(--space-6); letter-spacing: -0.01em; }
 .contact .btn { background: var(--color-accent); color: var(--color-text-inverse); }
@@ -107,7 +117,7 @@ footer { padding-block: var(--space-8); text-align: center; font-size: 0.85rem; 
 .logo-mark { height: 1.8rem; width: auto; display: block; }
 .about-logo {
   width: 100%;
-  max-width: 300px;
+  max-width: 220px;
   height: auto;
   display: block;
   margin: 0 auto;
