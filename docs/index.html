@@ -208,5 +208,14 @@
 </script>
   <!-- 100% privacy-first analytics -->
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script>
+document.querySelectorAll('.btn').forEach(function (btn) {
+  btn.addEventListener('mousemove', function (e) {
+    var r = btn.getBoundingClientRect();
+    btn.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    btn.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  });
+});
+</script>
 </body>
 </html>
