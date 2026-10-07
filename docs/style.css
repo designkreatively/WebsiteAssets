@@ -2,7 +2,7 @@
 :root, [data-theme="dark"] {
   --color-bg: #222222; --color-surface: #2a2a2a; --color-surface-2: #333333; --color-border: #3d3d3d;
   --color-text: #f5f5f0; --color-text-muted: #a8a8a8; --color-text-faint: #7d7d7d; --color-text-inverse: #1a1a1a;
-  --color-accent: #a9bccf; --color-accent-strong: #c3d1de;
+  --color-accent: #35e9ee; --color-accent-strong: #c3d1de;
   --font-display: 'Montserrat', 'Helvetica Neue', sans-serif; --font-body: 'Montserrat', 'Helvetica Neue', sans-serif;
   --space-2: 0.5rem; --space-4: 1rem; --space-6: 1.5rem; --space-8: 2rem;
   --space-12: 3rem; --space-16: 4rem; --space-24: 6rem; --max-width: 1120px;
@@ -10,7 +10,7 @@
 [data-theme="light"] {
   --color-bg: #f5f5f0; --color-surface: #ffffff; --color-surface-2: #ececE6; --color-border: #dcdcd5;
   --color-text: #1a1a1a; --color-text-muted: #5c5c58; --color-text-faint: #7d7d7d; --color-text-inverse: #f5f5f0;
-  --color-accent: #4d6b85; --color-accent-strong: #35495e;
+  --color-accent: #00c1d0; --color-accent-strong: #35495e;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
