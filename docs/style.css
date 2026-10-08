@@ -136,7 +136,10 @@ footer { padding-block: var(--space-8); text-align: center; font-size: 0.85rem; 
 .social-link:hover { background: var(--color-accent); transform: translateY(-2px); }
 .social-link.ig { -webkit-mask-image: url(https://cdn.simpleicons.org/instagram); mask-image: url(https://cdn.simpleicons.org/instagram); }
 .social-link.be { -webkit-mask-image: url(https://cdn.simpleicons.org/behance); mask-image: url(https://cdn.simpleicons.org/behance); }
-.social-link.li { -webkit-mask-image: url(https://cdn.simpleicons.org/linkedin); mask-image: url(https://cdn.simpleicons.org/linkedin); }
+.social-link.li {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='4.2' cy='4.2' r='2.4'/%3E%3Crect x='2' y='8.6' width='4.4' height='13'/%3E%3Cpath d='M9.4 8.6h4.2v1.8C14.4 9 16 8.3 17.7 8.3c3.3 0 4.3 2.1 4.3 5.3v8H17.6v-7c0-1.4-.5-2.4-1.8-2.4s-2.1 1-2.1 2.4v7H9.4z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='4.2' cy='4.2' r='2.4'/%3E%3Crect x='2' y='8.6' width='4.4' height='13'/%3E%3Cpath d='M9.4 8.6h4.2v1.8C14.4 9 16 8.3 17.7 8.3c3.3 0 4.3 2.1 4.3 5.3v8H17.6v-7c0-1.4-.5-2.4-1.8-2.4s-2.1 1-2.1 2.4v7H9.4z'/%3E%3C/svg%3E");
+}
 .breadcrumb { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: var(--space-8); }
 .breadcrumb a { color: var(--color-accent); }
 .project-header { padding-top: var(--space-16); padding-bottom: var(--space-8); }
