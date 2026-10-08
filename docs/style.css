@@ -117,6 +117,26 @@ header { position: sticky; top: 0; background: color-mix(in oklab, var(--color-b
 .contact h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 4.5vw, 3rem); margin-bottom: var(--space-6); letter-spacing: -0.01em; }
 .contact .btn { background: var(--color-accent); color: var(--color-text-inverse); }
 footer { padding-block: var(--space-8); text-align: center; font-size: 0.85rem; color: var(--color-text-faint); }
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+.social { display: flex; gap: var(--space-4); }
+.social-link {
+  width: 22px;
+  height: 22px;
+  background: var(--color-text-muted);
+  -webkit-mask: center / contain no-repeat;
+  mask: center / contain no-repeat;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.social-link:hover { background: var(--color-accent); transform: translateY(-2px); }
+.social-link.ig { -webkit-mask-image: url(https://cdn.simpleicons.org/instagram); mask-image: url(https://cdn.simpleicons.org/instagram); }
+.social-link.be { -webkit-mask-image: url(https://cdn.simpleicons.org/behance); mask-image: url(https://cdn.simpleicons.org/behance); }
+.social-link.li { -webkit-mask-image: url(https://cdn.simpleicons.org/linkedin); mask-image: url(https://cdn.simpleicons.org/linkedin); }
 .breadcrumb { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: var(--space-8); }
 .breadcrumb a { color: var(--color-accent); }
 .project-header { padding-top: var(--space-16); padding-bottom: var(--space-8); }
