@@ -178,3 +178,11 @@ footer { padding-block: var(--space-8); text-align: center; font-size: 0.85rem; 
   display: block;
   margin: 0 auto;
 }
+#trail {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
