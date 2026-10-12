@@ -250,10 +250,26 @@ document.querySelectorAll('.btn').forEach(function (btn) {
   resize();
   addEventListener('resize', resize);
 
-  addEventListener('pointermove', function (e) {
-    target = { x: e.clientX, y: e.clientY };
-    if (!head) head = { x: e.clientX, y: e.clientY };
-  }, { passive: true });
+function setTarget(x, y, reset) {
+  target = { x: x, y: y };
+  if (!head || reset) head = { x: x, y: y };
+}
+
+addEventListener('pointermove', function (e) {
+  if (e.pointerType === 'touch') return;
+  setTarget(e.clientX, e.clientY, false);
+}, { passive: true });
+
+addEventListener('touchstart', function (e) {
+  var t = e.touches[0];
+  pts.length = 0;
+  setTarget(t.clientX, t.clientY, true);
+}, { passive: true });
+
+addEventListener('touchmove', function (e) {
+  var t = e.touches[0];
+  setTarget(t.clientX, t.clientY, false);
+}, { passive: true });
 
   function lerp(a, b, t) { return a + (b - a) * t; }
 
