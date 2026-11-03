@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fight for Kindness — Design Kreatively</title>
+<meta name="description" content="Let Be, Let Feel, Let Speak — a typographic poster series selected for the Fight for Kindness exhibition at the House of Lucie Gallery, Budapest.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo"><a href="../index.html">design.kreatively</a></div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="../index.html#services">Services</a>
+        <a href="../work.html" class="active">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme">
+        <span class="tooltip" id="themeTooltip">Light theme</span>
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="project-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="../work.html">← Back to all work</a></div>
+    <div class="work-tag">Poster Design · Typographic Design · 2026</div>
+    <h1>Fight for Kindness</h1>
+  </div>
+</section>
+
+<section style="padding-top: 0;">
+  <div class="container">
+    <img class="project-cover-full" src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/Kindness/Kindness_Header.jpg" alt="Fight for Kindness header" loading="lazy">
+    <div class="project-text-block">
+      <p>This work has been selected for the Fight for Kindness exhibition at the House of Lucie Gallery in Budapest, 13–27 November.</p>
+      <p>Fight for Kindness is TypeCampus's international poster call, in which designers interpret kindness through typography. Selected posters are shown in exhibitions around the world each year on World Kindness Day, 13 November.</p>
+      <p>For this edition I made a series of three typographic posters inspired by "Live and let live": <em>Let Be, Let Feel, Let Speak</em>.</p>
+      <p><strong>Series description:</strong> A 3-piece typographic series exploring empathy as a shared practice, through feeling, listening, and freedom. Each artwork isolates one human gesture, then turns it into a simple visual rule for kinder coexistence.</p>
+      <p><a href="https://www.typecampus.com/fight-for-kindness" target="_blank" rel="noopener">Learn more about Fight for Kindness at TypeCampus →</a></p>
+    </div>
+    <div class="project-gallery-flex"><img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/Kindness/FFK-Feel-01.jpg" alt="Fight for Kindness process, step 1" loading="lazy"><img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/Kindness/FFK-Feel-02.jpg" alt="Fight for Kindness process, step 2" loading="lazy"><img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/Kindness/FFK-Feel-03.jpg" alt="Fight for Kindness process, step 3" loading="lazy"></div>
+    <div class="project-gallery-flex"><img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/Kindness/FFK-Feel-04.jpg" alt="Fight for Kindness process, step 4" loading="lazy"><img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/Kindness/FFK-Feel-05.jpg" alt="Fight for Kindness process, step 5" loading="lazy"></div>
+
+    <div class="project-text-block"><p><strong>Artwork 1 — Feel and Let Feel.</strong> A reflection on emotional permission, and the importance of allowing feelings to exist without judgment.</p></div>
+    <div class="project-gallery-flex"><img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/Kindness/Poster%201.jpg" alt="Feel and Let Feel poster" loading="lazy"></div>
+
+    <div class="project-text-block"><p><strong>Artwork 2 — Listen and Let Speak.</strong> A quiet reminder that understanding begins with listening, and making space for other voices.</p></div>
+    <div class="project-gallery-flex"><img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/Kindness/Poster%202.jpg" alt="Listen and Let Speak poster" loading="lazy"></div>
+
+    <div class="project-text-block"><p><strong>Artwork 3 — Be and Let Be.</strong> A statement about freedom, respect, and the dignity of letting others exist as they are.</p></div>
+    <div class="project-gallery-flex"><img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/Kindness/Poster%203.jpg" alt="Be and Let Be poster" loading="lazy"></div>
+
+    <div class="project-gallery-flex"><img src="https://raw.githubusercontent.com/designkreatively/WebsiteAssets/main/Kindness/Selected%20Badge.jpg" alt="Selected for Fight for Kindness badge" loading="lazy"></div>
+
+    <div class="work-tags" style="margin-top: var(--space-6);"><span class="pill">Poster Design</span><span class="pill">Typographic Design</span><span class="pill">Poster Series</span><span class="pill">Design for Good</span></div>
+    <div><a class="back-link" href="../work.html">← Back to all work</a></div>
+  </div>
+</section>
+<footer>
+  <div class="container">&copy; 2026 Design Kreatively — Mattia. Brussels, Belgium.</div>
+</footer>
+<script>
+(function(){
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  var icon = document.getElementById('themeIcon');
+  var tooltip = document.getElementById('themeTooltip');
+  var sunIcon = '<path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path><circle cx="12" cy="12" r="5"></circle>';
+  var bulbIcon = '<path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2z"></path>';
+  var current = 'dark';
+  root.setAttribute('data-theme', current);
+  toggle.addEventListener('click', function(){
+    current = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', current);
+    if (current === 'dark') { icon.innerHTML = bulbIcon; tooltip.textContent = 'Light theme'; toggle.setAttribute('aria-label', 'Switch to light theme'); }
+    else { icon.innerHTML = sunIcon; tooltip.textContent = 'Dark theme'; toggle.setAttribute('aria-label', 'Switch to dark theme'); }
+  });
+})();
+</script>
+<script src="./gallery.js"></script>
+</body>
+</html>
