@@ -3,31 +3,30 @@
   const galleries = document.querySelectorAll('.project-gallery-flex');
   if (!galleries.length) return;
 
-  function layout(gallery) {
+    function layout(gallery) {
     const images = Array.from(gallery.querySelectorAll('img'));
     if (!images.length || images.some(img => !img.naturalWidth || !img.naturalHeight)) return;
 
     if (window.innerWidth <= 600) {
+      gallery.style.removeProperty('flex-wrap');
       images.forEach(img => {
         img.style.setProperty('width', '100%', 'important');
         img.style.setProperty('height', 'auto', 'important');
         img.style.setProperty('flex', 'none', 'important');
+        img.style.setProperty('aspect-ratio', 'auto', 'important');
         img.style.setProperty('object-fit', 'contain', 'important');
       });
       return;
     }
 
-    const style = getComputedStyle(gallery);
-    const gap = parseFloat(style.columnGap) || 0;
-    const width = gallery.clientWidth - gap * (images.length - 1);
-    if (width <= 0) return;
-    const ratios = images.map(img => img.naturalWidth / img.naturalHeight);
-    const height = width / ratios.reduce((sum, ratio) => sum + ratio, 0);
-
-    images.forEach((img, index) => {
-      img.style.setProperty('width', `${height * ratios[index]}px`, 'important');
-      img.style.setProperty('height', `${height}px`, 'important');
-      img.style.setProperty('flex', 'none', 'important');
+    gallery.style.setProperty('flex-wrap', 'nowrap', 'important');
+    images.forEach(img => {
+      const ratio = img.naturalWidth / img.naturalHeight;
+      img.style.setProperty('flex', `${ratio} 1 0`, 'important');
+      img.style.setProperty('width', '0', 'important');
+      img.style.setProperty('min-width', '0', 'important');
+      img.style.setProperty('height', 'auto', 'important');
+      img.style.setProperty('aspect-ratio', String(ratio), 'important');
       img.style.setProperty('object-fit', 'contain', 'important');
     });
   }
