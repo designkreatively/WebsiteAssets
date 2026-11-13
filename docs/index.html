@@ -227,7 +227,16 @@ document.querySelectorAll('.btn').forEach(function (btn) {
   });
 });
 </script>
-<script src="./script.js"></script>
+<script type="text/javascript">
+  window._mfq = window._mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript"; mf.defer = true;
+    mf.src = "//cdn.mouseflow.com/projects/7ab87725-174e-46b5-8d14-1e771aed82a9.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
+</script>
+  <script src="./script.js"></script>
     <script>
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
